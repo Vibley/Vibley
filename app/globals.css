@@ -1,7 +1,91 @@
-.input {
-  background: #0f172a;
+/* Base reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: #0b1020;
+  color: #ffffff;
+}
+
+/* Layout */
+main {
+  min-height: 100vh;
+}
+
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Typography */
+h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+p {
+  color: #cbd5e1;
+  font-size: 18px;
+}
+
+/* Buttons */
+a, button {
+  display: inline-block;
+  background: linear-gradient(135deg, #6c4ef7, #29c1f7);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Cards */
+.card {
+  background: #121a33;
   border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* Form */
+input, select {
+  width: 100%;
   padding: 12px;
   border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #0f172a;
   color: white;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
 }
